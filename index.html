@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <h1>My Projects</h1>
+        <p class="author">sacid heysem sicak</p>
+        <a href="path/to/your/cv.pdf" download class="cv-button">CV</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="project">
+                <a href="https://sacid66.github.io/snakegame.github.io/" target="_blank">
+                    <div class="box">
+                        <video src="snake.mp4" loop muted></video>
+                        <img src="snake.png" alt="Snake Game">
+                    </div>
+                </a>
+                <div class="title">Snake Game</div>
+            </div>
+            <div class="project">
+                <a href="https://sacid66.itch.io/flyingcacodemons" target="_blank">
+                    <div class="box">
+                        <video src="flying.mp4" loop muted></video>
+                        <img src="flying.png" alt="Flying Cacodemons">
+                    </div>
+                </a>
+                <div class="title">Flying Cacodemons</div>
+            </div>
+            <div class="project">
+                <a href="https://sacid66.itch.io/dreamfall-fright" target="_blank">
+                    <div class="box">
+                        <video src="dream.mp4" loop muted></video>
+                        <img src="dream.png" alt="Dreamfall Fright">
+                    </div>
+                </a>
+                <div class="title">Dreamfall Fright</div>
+            </div>
+            <div class="project">
+                <a href="https://chattingappv3-4.onrender.com" target="_blank">
+                    <div class="box">
+                        <video src="chatting.mp4" loop muted></video>
+                        <img src="chatting.png" alt="Project 4">
+                    </div>
+                </a>
+                <div class="title">Chatting App</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="project">
+                <a href="https://sacid66.github.io/Rotating-Cube/" target="_blank">
+                    <div class="box">
+                        <video src="cube.mp4" loop muted></video>
+                        <img src="cube.png" alt="Project 5">
+                    </div>
+                </a>
+                <div class="title">Rotating Cube</div>
+            </div>
+            <div class="project">
+                <a href="ada.html" target="_blank">
+                    <div class="box">
+                        <video src="ada.mp4" loop muted></video>
+                        <img src="hey_ada.png" alt="Project 6">
+                    </div>
+                </a>
+                <div class="title">"Ada" Web Browser</div>
+            </div>
+            <div class="project">
+                <a href="https://sacid66.github.io/rain/" target="_blank">
+                    <div class="box">
+                        <video src="rain.mp4" loop muted></video>
+                        <img src="rain_s.png" alt="Rain">
+                    </div>
+                </a>
+                <div class="title">Rain</div>
+            </div>
+            <div class="project">
+                <a href="https://example.com/matrix" target="_blank">
+                    <div class="box">
+                        <video src="matrix.mp4" loop muted></video>
+                        <img src="matrix.png" alt="Interactive Matrix Effect">
+                    </div>
+                </a>
+                <div class="title">Interactive Matrix Effect</div>
+            </div>
+        </div>
+    </div>
+    <audio autoplay loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.querySelectorAll('.box').forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                const video = box.querySelector('video');
+                video.style.display = 'block';
+                video.play();
+            });
+            box.addEventListener('mouseleave', () => {
+                const video = box.querySelector('video');
+                video.style.display = 'none';
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+</html>
